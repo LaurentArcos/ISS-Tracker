@@ -27,6 +27,8 @@ function App() {
     setLongitude(parseFloat(longitude))
     setLatitude(parseFloat(latitude))
 
+    console.log(response);
+
   }
 
 
