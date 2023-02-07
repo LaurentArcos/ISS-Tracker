@@ -20,9 +20,10 @@ function App() {
 
     setLoading(true)
 
-    const response = await axios.get('http://api.open-notify.org/iss-now.json')
+    const response = await axios.get('https://api.wheretheiss.at/v1/satellites/25544')
     
-    const { longitude, latitude } = await response.data.iss_position;
+    const longitude = await response.data.longitude;
+    const latitude = await response.data.latitude;
 
     setLongitude(parseFloat(longitude))
     setLatitude(parseFloat(latitude))
